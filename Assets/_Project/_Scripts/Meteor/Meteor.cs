@@ -8,6 +8,8 @@ public class Meteor : Projectile, IDamageable
     private float _currentHealth;
     private bool _isDestroyed;
 
+    [SerializeField] ParticleSystem destroyPat;
+
     public float MaxHealth => _maxHealth;
 
     public float CurrentHealth
@@ -39,6 +41,8 @@ public class Meteor : Projectile, IDamageable
         CurrentHealth -= damageAmount;
         if (IsDestroyed)
         {
+            ParticleSystem sharts = Instantiate(destroyPat);
+            sharts.transform.position = transform.position;
             Destroy(gameObject);
         }
     }
@@ -57,6 +61,8 @@ public class Meteor : Projectile, IDamageable
         // This is because the meteors can spawn beyond the bounds based on our MeteorSpawner script
         if (CurrentHealth < MaxHealth && other.CompareTag("Bounds"))
         {
+            ParticleSystem sharts = Instantiate(bulletspt);
+            sharts.transform.position = transform.position;
             Destroy(gameObject);
         }
     }

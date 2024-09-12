@@ -8,6 +8,8 @@ public class PlayerShip : Ship, IShooter
     [SerializeField] private Transform[] _spawnPoints;
     public Transform[] SpawnPoints => _spawnPoints;
 
+   
+
     public void Shoot(Vector2 upDirection)
     {
         foreach (var spawnPoint in _spawnPoints)

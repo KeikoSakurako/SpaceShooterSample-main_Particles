@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyShip : Ship, IShooter
 {
+    [SerializeField] ParticleSystem destroyPat;
+
     #region Shooting
     [Header("Shooting")]
     [SerializeField] private Transform[] _spawnPoints;
@@ -76,8 +78,12 @@ public class EnemyShip : Ship, IShooter
     #endregion
     public override void TakeDamage(float damageAmount)
     {
+        
+
         base.TakeDamage(damageAmount);
         if (!IsDestroyed) { return; }
+        ParticleSystem sharts = Instantiate(destroyPat);
+        sharts.transform.position = transform.position;
         Destroy(gameObject);
     }
 }
