@@ -42,7 +42,7 @@ public abstract class Ship : MonoBehaviour, IPhysicsMovable, IDamageable
 
     #region Movement
     [Header("Movement")]
-    [SerializeField] private float _movementSpeed;
+    [SerializeField] public float _movementSpeed;
     public float MovementSpeed => _movementSpeed;
     [SerializeField] private Rigidbody2D _rigidbody2D;
     public Rigidbody2D Rigidbody2D => _rigidbody2D;

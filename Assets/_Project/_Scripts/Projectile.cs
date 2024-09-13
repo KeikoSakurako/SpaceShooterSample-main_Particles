@@ -8,7 +8,7 @@ public abstract class Projectile : MonoBehaviour, IPhysicsMovable, IDamager
     [SerializeField] float _movementSpeed;
     public float MovementSpeed => _movementSpeed;
 
-    [SerializeField] float _damageAmount;
+    [SerializeField] public float _damageAmount;
     public float DamageAmount => _damageAmount;
 
     public virtual void Move(Vector2 upDirection)

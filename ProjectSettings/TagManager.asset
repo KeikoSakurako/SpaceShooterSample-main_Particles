@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bounds
   - Planet
+  - Bullet
   layers:
   - Default
   - TransparentFX
