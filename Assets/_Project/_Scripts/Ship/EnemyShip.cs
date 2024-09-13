@@ -31,6 +31,12 @@ public class EnemyShip : Ship, IShooter
     [SerializeField] private float _maxDistanceThreshold = 9f;
     private float _distanceThreshold;
 
+    //The Points
+    public GameObject[] points;
+    private int pointIndex;
+
+    public float spd;
+
     private Transform _planetTransform;
     private Vector2 _directionToPlanet;
 
@@ -42,6 +48,12 @@ public class EnemyShip : Ship, IShooter
 
         _distanceThreshold = Random.Range(_minDistanceThreshold, _maxDistanceThreshold);
     }
+
+    private void Start()
+    {
+        transform.position = points[pointIndex].transform.position;
+    }
+
 
     private void Update()
     {
@@ -61,6 +73,29 @@ public class EnemyShip : Ship, IShooter
                 _elapsedTime = 0f;
             }
         }
+
+        //Addpoints
+        if (pointIndex <= points.Length - 1)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, points[pointIndex].transform.position, spd * Time.deltaTime);
+
+        }
+
+        if (transform.position == points[pointIndex].transform.position)
+        {
+            pointIndex += 1;
+        }
+
+        if (pointIndex == points.Length)
+        {
+            pointIndex = 0;
+        }
+
+
+
+
+
+
     }
     private void FixedUpdate()
     {
