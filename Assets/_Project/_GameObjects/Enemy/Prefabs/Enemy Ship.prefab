@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 2511292360728652231}
   - component: {fileID: 6029768398787008856}
   - component: {fileID: 3611768797668749056}
+  - component: {fileID: -921391310031017751}
   m_Layer: 0
   m_Name: Enemy Ship
   m_TagString: Untagged
@@ -274,4 +275,22 @@ MonoBehaviour:
   - {fileID: 1559769495578293540}
   _bullet: {fileID: 7483549760044142057, guid: 6b997a2fa0361f0459a4ee5749f0e9d6, type: 3}
   _interval: 1
-  _distanceThreshold: 9
+  _minDistanceThreshold: 7
+  _maxDistanceThreshold: 9
+--- !u!114 &-921391310031017751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9042617024688429244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316e352511f9b354198110a6beab3e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItemPre: {fileID: 748926343326991928, guid: 2a7b20b9d58287b4485647a0ef151985, type: 3}
+  lootlist:
+  - {fileID: 11400000, guid: fcabd9ad2e2abcc4dac241cf2bf88a7d, type: 2}
+  - {fileID: 11400000, guid: 29dce5731f693bd458f4723cb3a0699c, type: 2}
+  - {fileID: 11400000, guid: 7a7e7b99bc46b054582b06e9423e34b0, type: 2}

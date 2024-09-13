@@ -39,6 +39,7 @@ public class Meteor : Projectile, IDamageable
         CurrentHealth -= damageAmount;
         if (IsDestroyed)
         {
+            GetComponent<Lootbag>().InstatiateLoot(transform.position);
             Destroy(gameObject);
         }
     }
@@ -57,6 +58,7 @@ public class Meteor : Projectile, IDamageable
         // This is because the meteors can spawn beyond the bounds based on our MeteorSpawner script
         if (CurrentHealth < MaxHealth && other.CompareTag("Bounds"))
         {
+            
             Destroy(gameObject);
         }
     }

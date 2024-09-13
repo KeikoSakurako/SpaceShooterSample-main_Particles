@@ -5,7 +5,7 @@ public abstract class Ship : MonoBehaviour, IPhysicsMovable, IDamageable
     #region Health
     [Header("Health")]
     [SerializeField] private float _maxHealth = 5f;
-    private float _currentHealth;
+    public float _currentHealth;
     private bool _isDestroyed;
 
     public float MaxHealth => _maxHealth;

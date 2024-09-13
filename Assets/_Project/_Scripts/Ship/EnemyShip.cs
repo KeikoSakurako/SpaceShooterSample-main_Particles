@@ -78,6 +78,7 @@ public class EnemyShip : Ship, IShooter
     {
         base.TakeDamage(damageAmount);
         if (!IsDestroyed) { return; }
+        GetComponent<Lootbag>().InstatiateLoot(transform.position);
         Destroy(gameObject);
     }
 }

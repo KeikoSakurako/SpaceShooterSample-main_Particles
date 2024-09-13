@@ -2,42 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Atkbuff : MonoBehaviour
+[CreateAssetMenu(menuName = "Power/Atk")]
+public class Atkbuff : BuffManager
 {
-	public float multiplier = 1.5f;
-	public float dura = 5;
+    public float multiplier;
+    //public float dura = 5;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public override void Apply(GameObject target)
     {
-		if (collision.CompareTag("Bullet"))
-		{
-			StartCoroutine(Pickup(collision));
-		}
-	}
-
- 
+        PlayerBullet stats = FindAnyObjectByType<PlayerBullet>();
+        stats._damageAmount *= multiplier;
+        target.transform.localScale *= multiplier;
 
 
 
+    }
 
 
-
-
-    IEnumerator Pickup(Collider2D player)
-    {
-		player.transform.localScale *= multiplier;
-
-		GetComponent<SpriteRenderer>().enabled = false;
-		GetComponent<BoxCollider2D>().enabled = false;
-
-		yield return new WaitForSeconds(dura);
-
-		//Revert	
-		//stats.health /= multiplier;
-
-		Destroy(gameObject);
-	}
-
-
-	
 }
