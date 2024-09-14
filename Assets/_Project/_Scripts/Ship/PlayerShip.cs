@@ -12,7 +12,11 @@ public class PlayerShip : Ship, IShooter
     {
         foreach (var spawnPoint in _spawnPoints)
         {
-            var bullet = Instantiate(_bullet, spawnPoint.position, Quaternion.identity);
+            //
+            var bullet = Instantiate(_bullet, spawnPoint.position, Quaternion.identity).GetComponent<PlayerBullet>();
+            bullet.Intialize(this);
+            
+
             bullet.Move(upDirection);
         }
     }

@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 4724480241748807688}
   - component: {fileID: 7584234931717032584}
   - component: {fileID: 7258067087482505547}
-  - component: {fileID: -226504898882457159}
+  - component: {fileID: -1167418249566928237}
   m_Layer: 0
   m_Name: Meteor
   m_TagString: Untagged
@@ -208,7 +208,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 69e3ee0c246a1a140bfd22e44ddb22cc, type: 3}
   - {fileID: 21300000, guid: 8b9e2f9d1c76bf94d9436744420558ef, type: 3}
   - {fileID: 21300000, guid: 2adcf5c135766934cadf01a752974473, type: 3}
---- !u!114 &-226504898882457159
+--- !u!114 &-1167418249566928237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,11 +217,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3223179498951190371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 316e352511f9b354198110a6beab3e85, type: 3}
+  m_Script: {fileID: 11500000, guid: 82a35191cfac30a4b954dd05659fe85c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropItemPre: {fileID: 748926343326991928, guid: 2a7b20b9d58287b4485647a0ef151985, type: 3}
-  lootlist:
-  - {fileID: 11400000, guid: fcabd9ad2e2abcc4dac241cf2bf88a7d, type: 2}
-  - {fileID: 11400000, guid: 29dce5731f693bd458f4723cb3a0699c, type: 2}
-  - {fileID: 11400000, guid: 7a7e7b99bc46b054582b06e9423e34b0, type: 2}
+  dropItemPre:
+  - {fileID: 7267457598439099089, guid: c9c81c3f38fb7314195992d9e15e5843, type: 3}
+  - {fileID: 3013830578767489240, guid: 4ca16239e359998468d36316ed3e1f7b, type: 3}
+  - {fileID: 3115743407125845832, guid: d5663a15f215b444580f61a7ac5c71c3, type: 3}
+  dropchange: 100
+  pt: {fileID: 0}

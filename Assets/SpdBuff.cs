@@ -6,11 +6,15 @@ using UnityEngine;
 public class SpdBuff : BuffManager
 {
     public float multiplier;
+    [SerializeField] Rigidbody2D rb;
+
 
 
     public override void Apply(GameObject target)
     {
-        PlayerShip stats = FindAnyObjectByType<PlayerShip>();
+        PlayerBullet bullet = target.GetComponent<PlayerBullet>();
+        
+        PlayerShip stats = bullet.Ship;
         stats._movementSpeed *= multiplier;
         //target.transform.localScale *= multiplier;
 
