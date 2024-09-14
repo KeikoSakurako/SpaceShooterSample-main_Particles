@@ -276,3 +276,9 @@ MonoBehaviour:
   _interval: 1
   _minDistanceThreshold: 7
   _maxDistanceThreshold: 9
+  points:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  spd: 20
