@@ -7,6 +7,8 @@ public class PlayerShip : Ship, IShooter
     public Projectile Projectile => _bullet;
     [SerializeField] private Transform[] _spawnPoints;
     public Transform[] SpawnPoints => _spawnPoints;
+
+    //
     public bool activeup = false;
 
     public void Shoot(Vector2 upDirection)

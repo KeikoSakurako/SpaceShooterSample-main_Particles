@@ -17,11 +17,6 @@ public class PlayerBullet : Projectile
         _damageAmount = damage;
     }
 
-    public void IntializeP(Projectile projectile)
-    {
-        Projectile = projectile;
-    }
-
     protected override void OnTriggerEnter2D(Collider2D other)
     {
         base.OnTriggerEnter2D(other);

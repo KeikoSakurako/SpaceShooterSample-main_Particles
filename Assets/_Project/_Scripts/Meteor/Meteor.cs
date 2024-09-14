@@ -39,8 +39,8 @@ public class Meteor : Projectile, IDamageable
         CurrentHealth -= damageAmount;
         if (IsDestroyed)
         {
-            //GetComponent<Lootbag>().InstatiateLoot(transform.position);
-            //GetComponent<DropChance>().DropChance1(transform.position);
+            //Get
+            GetComponent<DropChance>().DropChance1(transform.position);
             Destroy(gameObject);
         }
     }

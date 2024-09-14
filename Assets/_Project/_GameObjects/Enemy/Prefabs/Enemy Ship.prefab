@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 2511292360728652231}
   - component: {fileID: 6029768398787008856}
   - component: {fileID: 3611768797668749056}
-  - component: {fileID: -921391310031017751}
+  - component: {fileID: -1829754070504604420}
   m_Layer: 0
   m_Name: Enemy Ship
   m_TagString: Untagged
@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 5
+  _currentHealth: 0
   _movementSpeed: 2
   _rigidbody2D: {fileID: 6029768398787008856}
   _spawnPoints:
@@ -277,7 +278,7 @@ MonoBehaviour:
   _interval: 1
   _minDistanceThreshold: 7
   _maxDistanceThreshold: 9
---- !u!114 &-921391310031017751
+--- !u!114 &-1829754070504604420
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,11 +287,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9042617024688429244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 316e352511f9b354198110a6beab3e85, type: 3}
+  m_Script: {fileID: 11500000, guid: 82a35191cfac30a4b954dd05659fe85c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropItemPre: {fileID: 748926343326991928, guid: 2a7b20b9d58287b4485647a0ef151985, type: 3}
-  lootlist:
-  - {fileID: 11400000, guid: fcabd9ad2e2abcc4dac241cf2bf88a7d, type: 2}
-  - {fileID: 11400000, guid: 29dce5731f693bd458f4723cb3a0699c, type: 2}
-  - {fileID: 11400000, guid: 7a7e7b99bc46b054582b06e9423e34b0, type: 2}
+  dropItemPre:
+  - {fileID: 3013830578767489240, guid: 4ca16239e359998468d36316ed3e1f7b, type: 3}
+  - {fileID: 7267457598439099089, guid: c9c81c3f38fb7314195992d9e15e5843, type: 3}
+  - {fileID: 3115743407125845832, guid: d5663a15f215b444580f61a7ac5c71c3, type: 3}
+  dropchange: 60

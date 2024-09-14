@@ -171,4 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec56560c6c60c24a87dec437a8b755a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poweff: {fileID: 11400000, guid: 0e8f03fcf948af3489e2c89ae76c5122, type: 2}
+  poweff: {fileID: 11400000, guid: b6516c93e26446f4cb642c61bee4617b, type: 2}
+  multiplier: 0
+  rb: {fileID: 0}

@@ -10,9 +10,9 @@ public class bullbuff : BuffManager
 
     public override void Apply(GameObject target)
     {
-        PlayerShip stats = FindObjectOfType<PlayerShip>();
+        PlayerBullet bullet = target.GetComponent<PlayerBullet>();
+        PlayerShip stats = bullet.Ship;
         stats._currentHealth *= multiplier;
-
 
     }
 }

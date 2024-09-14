@@ -221,8 +221,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropItemPre:
-  - {fileID: 7267457598439099089, guid: c9c81c3f38fb7314195992d9e15e5843, type: 3}
   - {fileID: 3013830578767489240, guid: 4ca16239e359998468d36316ed3e1f7b, type: 3}
-  - {fileID: 3115743407125845832, guid: d5663a15f215b444580f61a7ac5c71c3, type: 3}
-  dropchange: 100
-  pt: {fileID: 0}
+  dropchange: 40

@@ -9,6 +9,7 @@ public class SpdBuff : BuffManager
     [SerializeField] Rigidbody2D rb;
 
 
+   
 
     public override void Apply(GameObject target)
     {
