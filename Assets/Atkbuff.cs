@@ -11,10 +11,11 @@ public class Atkbuff : BuffManager
     public override void Apply(GameObject target)
     {
         PlayerBullet bullet = target.GetComponent<PlayerBullet>();
-        Projectile stats = bullet.Projectile;
-        stats._damageAmount *= multiplier;
-        Debug.Log(stats);
-        target.transform.localScale *= multiplier;
+        PlayerShip stats = bullet.Ship;
+        stats.GetComponent<PlayerShip>().activeup = true;
+
+        //Debug.Log(stats);
+        //target.transform.localScale *= multiplier;
 
 
 

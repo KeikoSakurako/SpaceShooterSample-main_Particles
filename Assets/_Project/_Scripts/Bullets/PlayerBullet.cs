@@ -11,6 +11,11 @@ public class PlayerBullet : Projectile
     {
         Ship = ship;
     }
+    public void Intialize(PlayerShip ship,float damage)
+    {
+        Ship = ship;
+        _damageAmount = damage;
+    }
 
     public void IntializeP(Projectile projectile)
     {

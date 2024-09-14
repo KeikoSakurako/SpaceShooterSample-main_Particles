@@ -7,6 +7,7 @@ public class PlayerShip : Ship, IShooter
     public Projectile Projectile => _bullet;
     [SerializeField] private Transform[] _spawnPoints;
     public Transform[] SpawnPoints => _spawnPoints;
+    public bool activeup = false;
 
     public void Shoot(Vector2 upDirection)
     {
@@ -14,8 +15,15 @@ public class PlayerShip : Ship, IShooter
         {
             //
             var bullet = Instantiate(_bullet, spawnPoint.position, Quaternion.identity).GetComponent<PlayerBullet>();
-            bullet.Intialize(this);
-            
+
+            if (activeup == true)
+            {
+                bullet.Intialize(this, 20f);
+            }
+            else
+            {
+                bullet.Intialize(this);
+            }
 
             bullet.Move(upDirection);
         }
